@@ -25,3 +25,5 @@ git commit -m 'deploy'
 
 # si estás desplegando en https://<NOMBRE DE USUARIO>.github.io/<REPO>
 git push -f git@github.com:javier545dev/medical-ecommerce.git main:gh-pages
+
+cd -
