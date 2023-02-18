@@ -10,7 +10,7 @@ import { useState } from 'react'
 import { product } from './assets/data/data'
 
 function App() {
-  const isLogIn = useSelector((state) => state.auth.isLogin)
+  const isLogin = useSelector((state) => state.auth.isLogin)
 
   const [searchResults, setSearchResults] = useState([])
 
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      {isLogIn && (
+      {isLogin && (
         <Router>
           <Header onSearch={handleSearch} />
           <Switch>
@@ -38,7 +38,7 @@ function App() {
           <Footer />
         </Router>
       )}
-      {!isLogIn && <Login />}
+      {!isLogin && <Login />}
     </>
   )
 }
